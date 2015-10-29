@@ -37,28 +37,28 @@ $asset_path = Yii::$app->assetManager->getPublishedUrl('@frontend/themes/materia
     <body class="avoid-fout page-brand">
         <?php $this->beginBody() ?>
         <div class="avoid-fout-indicator avoid-fout-indicator-fixed">
-		<div class="progress-circular progress-circular-center">
-			<div class="progress-circular-wrapper">
-				<div class="progress-circular-inner">
-					<div class="progress-circular-left">
-						<div class="progress-circular-spinner"></div>
-					</div>
-					<div class="progress-circular-gap"></div>
-					<div class="progress-circular-right">
-						<div class="progress-circular-spinner"></div>
+			<div class="progress-circular progress-circular-center">
+				<div class="progress-circular-wrapper">
+					<div class="progress-circular-inner">
+						<div class="progress-circular-left">
+							<div class="progress-circular-spinner"></div>
+						</div>
+						<div class="progress-circular-gap"></div>
+						<div class="progress-circular-right">
+							<div class="progress-circular-spinner"></div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
         <header class="header header-waterfall">
             <ul class="nav nav-list pull-left">
-			<li>
-				<a data-toggle="menu" href="#menu">
-					<span class="icon icon-lg">menu</span>
-				</a>
-			</li>
-		</ul>
+				<li>
+					<a data-toggle="menu" href="#menu">
+						<span class="icon icon-lg">menu</span>
+					</a>
+				</li>
+			</ul>
             <?= Html::a(Yii::$app->name, Yii::$app->homeUrl, ['class' => 'header-logo']); ?>
 
             <ul class="nav nav-list pull-right">
