@@ -12,6 +12,21 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
+    	'urlManager' => [
+    		'class' => 'yii\web\UrlManager',
+    		'enablePrettyUrl' => true,
+    		'showScriptName' => false,
+    	],
+    		
+    	'view' => [
+    		'theme' => [
+    			'pathMap' => [
+    				'@app/views' => '@frontend/themes/material/views'
+    			]
+    		]
+    	],
+    		
+    		
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
