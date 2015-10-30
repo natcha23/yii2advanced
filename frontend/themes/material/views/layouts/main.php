@@ -1,11 +1,22 @@
 <?php
+if (class_exists('yii\debug\Module')) {
+	$this->off(\yii\web\View::EVENT_END_BODY, [\yii\debug\Module::getInstance(), 'renderToolbar']);
+}
 
 // This is Nikom Theme for Nikom Office
 use frontend\themes\material\MaterialAsset;
 use yii\helpers\Html;
 
+use frontend\assets\AppAsset;
+use common\widgets\Alert;
+
+
+
 MaterialAsset::register($this);
 $asset_path = Yii::$app->assetManager->getPublishedUrl('@frontend/themes/material/assets');
+
+AppAsset::register($this);
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -59,17 +70,19 @@ $asset_path = Yii::$app->assetManager->getPublishedUrl('@frontend/themes/materia
 					</a>
 				</li>
 			</ul>
+			
             <?= Html::a(Yii::$app->name, Yii::$app->homeUrl, ['class' => 'header-logo']); ?>
-
+            
             <ul class="nav nav-list pull-right">
-                <?php if (!Yii::$app->user->isGuest) { ?>
+                <?php //if (!\Yii::$app->user->isGuest) { ?>
+                    
                     <li>
                         <a data-toggle="menu" href="#profile">
                             <span class="access-hide">มานพ กองอุ่น</span>
-                            <span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="<?= $asset_path; ?>/images/users/avatar-001.jpg"></span>
+                            <span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="<?= $asset_path; ?>/images/users/avatar-001.jpg">****</span>
                         </a>
                     </li>
-                <?php } ?>
+                <?php //} ?>
             </ul>
 
         </header>
