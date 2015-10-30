@@ -10,12 +10,10 @@ use yii\helpers\Html;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
 
-
-
 MaterialAsset::register($this);
 $asset_path = Yii::$app->assetManager->getPublishedUrl('@frontend/themes/material/assets');
 
-AppAsset::register($this);
+// AppAsset::register($this);
 
 ?>
 <?php $this->beginPage() ?>
@@ -174,7 +172,7 @@ AppAsset::register($this);
         </footer>
         <div class="fbtn-container">
             <div class="fbtn-inner">
-                <a class="fbtn fbtn-red fbtn-lg" data-toggle="dropdown"><span class="fbtn-text">ทางลัด</span><span class="fbtn-ori icon">add</span><span class="fbtn-sub icon">close</span></a>
+                <a class="fbtn fbtn-red fbtn-lg" data-toggle="dropdown"><span class="fbtn-text">ทางลัด</span><span class="fbtn-sub icon">close</span><span class="fbtn-ori icon">add</span></a>
                 <div class="fbtn-dropdown">
                     
                     <?= Html::a('<span class="fbtn-text">เข้าสู่ระบบ</span><span class="fa fa-link"></span>', ['/site/login'], ['class' => 'fbtn fbtn-alt']); ?>
