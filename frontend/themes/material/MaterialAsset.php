@@ -9,7 +9,7 @@ class MaterialAsset extends AssetBundle {
 	public $css = [
 			'css/base.min.css',
 			'css/project.min.css',
-			'css/custom.css',
+// 			'css/custom.css',
 	];
 	
 	public $js = [

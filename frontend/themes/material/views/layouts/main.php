@@ -60,7 +60,7 @@ $asset_path = Yii::$app->assetManager->getPublishedUrl('@frontend/themes/materia
 				</div>
 			</div>
 		</div>
-        <header class="header header-waterfall">
+        <header class="header header-waterfall affix-top">
             <ul class="nav nav-list pull-left">
 				<li>
 					<a data-toggle="menu" href="#menu">
